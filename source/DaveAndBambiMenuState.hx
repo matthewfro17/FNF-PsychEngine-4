@@ -210,7 +210,6 @@ class DaveAndBambiMenuState extends MusicBeatState
 
 	public function LoadProperPack()
 		{
-			switch (AllPossibleSongs[].toLowerCase())
 			{
 				addWeek(['corned'], 3, ['bambi']);					
                                 addWeek(['whoopsie'], 3, ['expunged']);
@@ -220,6 +219,21 @@ class DaveAndBambiMenuState extends MusicBeatState
 			}
 		}
 
+	public function addWeek(songs:Array<String>, weekNum:Int, ?songCharacters:Array<String>)
+	{
+		if (songCharacters == null)
+			songCharacters = ['bf'];
+
+		var num:Int = 0;
+
+		for (song in songs)
+		{
+			addSong(song, weekNum, songCharacters[num]);
+
+			if (songCharacters.length != 1)
+				num++;
+		}
+	}
 
 	public function addSong(songName:String, weekNum:Int, songCharacter:String, color:Int)
 	{
