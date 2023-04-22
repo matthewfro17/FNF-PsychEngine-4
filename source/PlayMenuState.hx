@@ -126,7 +126,7 @@ class MainMenuState extends MusicBeatState
 
 			// Golden
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 250)).loadGraphic(Paths.image('mainmenu/golden');
+			var menuItem:FlxSprite = new FlxSprite(120, 250).loadGraphic(Paths.image('mainmenu/golden');
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 1;
@@ -140,7 +140,7 @@ class MainMenuState extends MusicBeatState
 
 			// Dave and Bambi
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 400)).loadGraphic(Paths.image('mainmenu/daveandbambi');
+			var menuItem:FlxSprite = new FlxSprite(120, 400).loadGraphic(Paths.image('mainmenu/daveandbambi');
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 2;
