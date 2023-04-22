@@ -84,13 +84,15 @@ class ExtrasMenuState extends MusicBeatState
 		bg.updateHitbox();
 		bg.antialiasing = ClientPrefs.globalAntialiasing;
 		add(bg);
-        
+       
+	#if (flixel < "5.0.0") 
         backdrop = new FlxBackdrop(Paths.image('mainmenu/grid'), 0.2, 0, true, true);
-		backdrop.velocity.set(200, 110);
-		backdrop.updateHitbox();
-		backdrop.alpha = 0.5;
-		backdrop.screenCenter(X);
-		add(backdrop);
+	backdrop.velocity.set(200, 110);
+	backdrop.updateHitbox();
+	backdrop.alpha = 0.5;
+	backdrop.screenCenter(X);
+	add(backdrop);
+	#end
         
         var bga:FlxSprite = new FlxSprite(120).loadGraphic(Paths.image('bgthing'));
 		bga.setGraphicSize(Std.int(bg.width * 1.175));
