@@ -112,7 +112,7 @@ class MainMenuState extends MusicBeatState
 		
 			// Play Menu
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 100).loadGraphic(Paths.image('mainmenu/play');
+			var menuItem:FlxSprite = new FlxSprite(120, 100).loadGraphic(Paths.image('mainmenu/play'));
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 0;
@@ -135,7 +135,7 @@ class MainMenuState extends MusicBeatState
 
 			// Extras Menu
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 250)).loadGraphic(Paths.image('mainmenu/extras');
+			var menuItem:FlxSprite = new FlxSprite(120, 250)).loadGraphic(Paths.image('mainmenu/extras'));
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 1;
@@ -157,7 +157,7 @@ class MainMenuState extends MusicBeatState
 
 			// Credits
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 400)).loadGraphic(Paths.image('mainmenu/credits');
+			var menuItem:FlxSprite = new FlxSprite(120, 400)).loadGraphic(Paths.image('mainmenu/credits'));
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 2;
@@ -176,22 +176,6 @@ class MainMenuState extends MusicBeatState
 				char.scrollFactor.set();
 				char.antialiasing = ClientPrefs.globalAntialiasing;
 				add(char);
-
-			// Options
-			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 550)).loadGraphic(Paths.image('mainmenu/' + optionShit[1]);
-			menuItem.scale.x = scale;
-			menuItem.scale.y = scale;
-			menuItem.ID = 3;
-			menuItem.setGraphicSize(Std.int(menuItem.width * 0.70));
-			menuItems.add(menuItem);
-			var scr:Float = (optionShit.length - 4) * 0.135;
-			if(optionShit.length < 6) scr = 3;
-			menuItem.scrollFactor.set(3, scr);
-			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
-			menuItem.updateHitbox();
-
-
 		
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
@@ -303,8 +287,6 @@ class MainMenuState extends MusicBeatState
 										MusicBeatState.switchState(new ExtrasMenuState());
 									case 'credits':
 										MusicBeatState.switchState(new CreditsState());
-									case 'options':
-										LoadingState.loadAndSwitchState(new options.OptionsState());
 								}
 							});
 						}

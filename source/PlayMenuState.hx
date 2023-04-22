@@ -124,7 +124,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			menuItem.updateHitbox();
 
-			// Extras Menu
+			// Golden
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
 			var menuItem:FlxSprite = new FlxSprite(120, 250)).loadGraphic(Paths.image('mainmenu/golden');
 			menuItem.scale.x = scale;
@@ -138,7 +138,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			menuItem.updateHitbox();
 
-			// Credits
+			// Dave and Bambi
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
 			var menuItem:FlxSprite = new FlxSprite(120, 400)).loadGraphic(Paths.image('mainmenu/daveandbambi');
 			menuItem.scale.x = scale;
