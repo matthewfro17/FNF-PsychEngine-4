@@ -135,7 +135,7 @@ class MainMenuState extends MusicBeatState
 
 			// Extras Menu
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 250)).loadGraphic(Paths.image('mainmenu/extras'));
+			var menuItem:FlxSprite = new FlxSprite(120, 250).loadGraphic(Paths.image('mainmenu/extras'));
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 1;
@@ -157,7 +157,7 @@ class MainMenuState extends MusicBeatState
 
 			// Options
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 400)).loadGraphic(Paths.image('mainmenu/options'));
+			var menuItem:FlxSprite = new FlxSprite(120, 400).loadGraphic(Paths.image('mainmenu/options'));
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 2;
