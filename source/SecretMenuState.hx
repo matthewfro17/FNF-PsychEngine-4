@@ -20,7 +20,7 @@ import Discord.DiscordClient;
 #end
 using StringTools;
 
-class FreeplayState extends MusicBeatState
+class SecretMenuState extends MusicBeatState
 {
 	var songs:Array<SongMetadata> = [];
 
@@ -28,7 +28,7 @@ class FreeplayState extends MusicBeatState
 	var curSelected:Int = 0;
 	var curDifficulty:Int = 1;
 
-	var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('backgrounds/freeplay/davehouse'));
+	var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('backgrounds/freeplay/secret'));
 
 	var scoreBG:FlxSprite;
 	var scoreText:FlxText;
@@ -56,10 +56,6 @@ class FreeplayState extends MusicBeatState
 	private var CurrentPack:Int = 0;
 
 	private var iconArray:Array<HealthIcon> = [];
-
-	public static var bgPaths:Array<String> = [
-		'backgrounds/freeplay/secret'
-	];
 
 	override function create()
 	{
