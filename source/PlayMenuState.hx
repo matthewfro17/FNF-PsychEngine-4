@@ -33,9 +33,9 @@ class MainMenuState extends MusicBeatState
 	private var camAchievement:FlxCamera;
 	
 	var optionShit:Array<String> = [
-		'play',
-		'extras',
-		'credits',
+		'extrended',
+		'golden',
+		'daveandbambi',
 	];
 
 	var char:FlxSprite;
@@ -88,8 +88,8 @@ class MainMenuState extends MusicBeatState
 		backdrop.alpha = 0.5;
 		backdrop.screenCenter(X);
 		add(backdrop);
-        
-        var bga:FlxSprite = new FlxSprite(120).loadGraphic(Paths.image('bgthing'));
+
+        var bga:FlxSprite = new FlxSprite(-120).loadGraphic(Paths.image('backgrounds/uhhh'));
 		bga.setGraphicSize(Std.int(bg.width * 1.175));
 		bga.updateHitbox();
 		bga.screenCenter();
@@ -110,9 +110,9 @@ class MainMenuState extends MusicBeatState
 
 		for (i in 0...optionShit.length)
 		
-			// Play Menu
+			// extrended
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 100).loadGraphic(Paths.image('mainmenu/play'));
+			var menuItem:FlxSprite = new FlxSprite(120, 100).loadGraphic(Paths.image('mainmenu/extrended');
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 0;
@@ -123,19 +123,10 @@ class MainMenuState extends MusicBeatState
 			menuItem.scrollFactor.set(0, scr);
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			menuItem.updateHitbox();
-            
-            	char = new FlxSprite(-100, -270).loadGraphic(Paths.image('backgrounds/play'));//put your cords and image here
-				char.frames = Paths.getSparrowAtlas('mainmenu/bambiRemake');//here put the name of the xml
-				char.animation.addByPrefix('idleR', 'bambi idle', 24, true);//on 'idle normal' change it to your xml one
-				char.animation.play('idleR');//you can rename the anim however you want to
-				char.scrollFactor.set();
-				char.antialiasing = ClientPrefs.globalAntialiasing;
-				add(char);
 
-
-			// Extras Menu
+			// Golden
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 250).loadGraphic(Paths.image('mainmenu/extras'));
+			var menuItem:FlxSprite = new FlxSprite(120, 250).loadGraphic(Paths.image('mainmenu/golden');
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 1;
@@ -147,17 +138,9 @@ class MainMenuState extends MusicBeatState
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			menuItem.updateHitbox();
 
-            	char = new FlxSprite(-100, -270).loadGraphic(Paths.image('backgrounds/extras'));//put your cords and image here
-				char.frames = Paths.getSparrowAtlas('mainmenu/bambiRemake');//here put the name of the xml
-				char.animation.addByPrefix('idleR', 'bambi idle', 24, true);//on 'idle normal' change it to your xml one
-				char.animation.play('idleR');//you can rename the anim however you want to
-				char.scrollFactor.set();
-				char.antialiasing = ClientPrefs.globalAntialiasing;
-				add(char);
-
-			// Options
+			// Dave and Bambi
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 400).loadGraphic(Paths.image('mainmenu/options'));
+			var menuItem:FlxSprite = new FlxSprite(120, 400).loadGraphic(Paths.image('mainmenu/daveandbambi');
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 2;
@@ -169,13 +152,6 @@ class MainMenuState extends MusicBeatState
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			menuItem.updateHitbox();
 
-            	char = new FlxSprite(-100, -270).loadGraphic(Paths.image('backgrounds/options'));//put your cords and image here
-				char.frames = Paths.getSparrowAtlas('mainmenu/bambiRemake');//here put the name of the xml
-				char.animation.addByPrefix('idleR', 'bambi idle', 24, true);//on 'idle normal' change it to your xml one
-				char.animation.play('idleR');//you can rename the anim however you want to
-				char.scrollFactor.set();
-				char.antialiasing = ClientPrefs.globalAntialiasing;
-				add(char);
 		
 		var versionShit:FlxText = new FlxText(12, FlxG.height - 44, 0, "Psych Engine v" + psychEngineVersion, 12);
 		versionShit.scrollFactor.set();
@@ -230,6 +206,11 @@ class MainMenuState extends MusicBeatState
 
 		if (!selectedSomethin)
 		{
+			else if (FlxG.keys.anyJustPressed(debugKeys))
+			{
+				selectedSomethin = true;
+				MusicBeatState.switchState(new SecretMenuState());
+			}
 			if (controls.UI_UP_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -281,13 +262,12 @@ class MainMenuState extends MusicBeatState
 
 								switch (daChoice)
 								{
-									case 'play':
-										MusicBeatState.switchState(new PlayMenuState());
-									case 'extras':
-										MusicBeatState.switchState(new ExtrasMenuState());
-									case 'options':
-										MusicBeatState.switchState(new options.OptionsState());':
-										MusicBeatState.switchState(new options.OptionsState());
+									case 'extrended':
+										MusicBeatState.switchState(new ExtrendedMenuState());
+									case 'golden':
+										MusicBeatState.switchState(new GoldenMenuState());
+									case 'daveandbambi':
+										MusicBeatState.switchState(new DaveAndBambiMenuState());
 								}
 							});
 						}
