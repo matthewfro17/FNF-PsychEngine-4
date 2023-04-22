@@ -20,7 +20,7 @@ import Discord.DiscordClient;
 #end
 using StringTools;
 
-class FreeplayState extends MusicBeatState
+class DaveAndBambiMenuState extends MusicBeatState
 {
 	var songs:Array<SongMetadata> = [];
 
