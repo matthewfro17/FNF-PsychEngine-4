@@ -112,7 +112,7 @@ class MainMenuState extends MusicBeatState
 
 			// Credits
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 400)).loadGraphic(Paths.image('mainmenu/credits'));
+			var menuItem:FlxSprite = new FlxSprite(120, 400).loadGraphic(Paths.image('mainmenu/credits'));
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 2;
@@ -134,7 +134,7 @@ class MainMenuState extends MusicBeatState
 
 			// Discord Menu
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 250)).loadGraphic(Paths.image('mainmenu/discord'));
+			var menuItem:FlxSprite = new FlxSprite(120, 250).loadGraphic(Paths.image('mainmenu/discord'));
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 1;
@@ -156,7 +156,7 @@ class MainMenuState extends MusicBeatState
 
 			// Mods Menu
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 250)).loadGraphic(Paths.image('mainmenu/mods'));
+			var menuItem:FlxSprite = new FlxSprite(120, 250).loadGraphic(Paths.image('mainmenu/mods'));
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 1;
