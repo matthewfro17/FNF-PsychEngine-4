@@ -219,6 +219,22 @@ class SecretMenuState extends MusicBeatState
 			}
 		}
 
+	public function addWeek(songs:Array<String>, weekNum:Int, ?songCharacters:Array<String>)
+	{
+		if (songCharacters == null)
+			songCharacters = ['bf'];
+
+		var num:Int = 0;
+
+		for (song in songs)
+		{
+			addSong(song, weekNum, songCharacters[num]);
+
+			if (songCharacters.length != 1)
+				num++;
+		}
+	}
+
 	public function addSong(songName:String, weekNum:Int, songCharacter:String, color:Int)
 	{
 		songs.push(new SongMetadata(songName, weekNum, songCharacter, color));
