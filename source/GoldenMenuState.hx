@@ -20,7 +20,7 @@ import Discord.DiscordClient;
 #end
 using StringTools;
 
-class FreeplayState extends MusicBeatState
+class GoldenMenuState extends MusicBeatState
 {
 	var songs:Array<SongMetadata> = [];
 
@@ -56,10 +56,6 @@ class FreeplayState extends MusicBeatState
 	private var CurrentPack:Int = 0;
 
 	var loadingPack:Bool = false;
-
-	public static var bgPaths:Array<String> = [
-		'backgrounds/freeplay/gold'
-	];
 
 	var songColors:Array<FlxColor> = [
 		0xFF000000, // DUMBASS PLACEHOLDER
