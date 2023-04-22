@@ -216,9 +216,9 @@ class ExtrendedMenuState extends MusicBeatState
 				addWeek(['figures'], 1, ['figumbi']);
 				addWeek(['contented'], 1, ['bambiminion']);
 				addWeek(['burger-blast'], 2,['bamburg']);
-				addWeek(['breakpoint'], 3, ['yambi']);				
+				addWeek(['breakpoint'], 3, ['yambi']);			
 				addWeek(['deep-dish'], 1, ['cruster']);
-				addWeek(['fully-breakfast'], 1, ['fully-breakfast']
+				addWeek(['fully-breakfast'], 1, ['fully-breakfast']);
 			}
 		}
 
