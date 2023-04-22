@@ -210,13 +210,28 @@ class GoldenMenuState extends MusicBeatState
 
 	public function LoadProperPack()
 		{
-			switch (AllPossibleSongs[].toLowerCase())
 			{
 					addWeek(['stars'], 3, ['golden-bandu']);
 					addWeek(['goldy-breaker'], 3,['disruptor']);
 					addWeek(['powerfull-wheelchair'], 3,['goldendave']);
 			}
 		}
+
+	public function addWeek(songs:Array<String>, weekNum:Int, ?songCharacters:Array<String>)
+	{
+		if (songCharacters == null)
+			songCharacters = ['bf'];
+
+		var num:Int = 0;
+
+		for (song in songs)
+		{
+			addSong(song, weekNum, songCharacters[num]);
+
+			if (songCharacters.length != 1)
+				num++;
+		}
+	}
 
 	public function addSong(songName:String, weekNum:Int, songCharacter:String, color:Int)
 	{
