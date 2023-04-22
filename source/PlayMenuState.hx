@@ -206,11 +206,6 @@ class MainMenuState extends MusicBeatState
 
 		if (!selectedSomethin)
 		{
-			else if (FlxG.keys.anyJustPressed(debugKeys))
-			{
-				selectedSomethin = true;
-				MusicBeatState.switchState(new SecretMenuState());
-			}
 			if (controls.UI_UP_P)
 			{
 				FlxG.sound.play(Paths.sound('scrollMenu'));
@@ -274,11 +269,13 @@ class MainMenuState extends MusicBeatState
 					});
 				}
 			}
-			#if desktop
-			else if (FlxG.keys.anyJustPressed(debugKeys))
+               }
+	       #if desktop
+	       else if (FlxG.keys.anyJustPressed(debugKeys))
+               {
 			{
 				selectedSomethin = true;
-				MusicBeatState.switchState(new MasterEditorMenu());
+				MusicBeatState.switchState(new SecretMenuState());
 			}
 			#end
 		}
