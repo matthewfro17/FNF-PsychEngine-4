@@ -28,7 +28,7 @@ class DaveAndBambiMenuState extends MusicBeatState
 {
         var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('backgrounds/freeplay/davehouse'));
 
-	var songs:Array<SongMetadata> = [];
+	var songs:Array<Songdata> = [];
 
 	var selector:FlxText;
 	private static var curSelected:Int = 0;
@@ -237,7 +237,7 @@ class DaveAndBambiMenuState extends MusicBeatState
 
 	public function addSong(songName:String, weekNum:Int, songCharacter:String, color:Int)
 	{
-		songs.push(new SongMetadata(songName, weekNum, songCharacter, color));
+		songs.push(new Songdata(songName, weekNum, songCharacter, color));
 	}
 
 	function weekIsLocked(name:String):Bool {
@@ -563,7 +563,7 @@ class DaveAndBambiMenuState extends MusicBeatState
 	}
 }
 
-class SongMetadata
+class Songdata
 {
 	public var songName:String = "";
 	public var week:Int = 0;
