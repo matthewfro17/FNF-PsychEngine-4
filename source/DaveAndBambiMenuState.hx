@@ -57,10 +57,6 @@ class DaveAndBambiMenuState extends MusicBeatState
 
 	private var iconArray:Array<HealthIcon> = [];
 
-	public static var bgPaths:Array<String> = [
-		'backgrounds/freeplay/davehouse'
-	];
-
 	override function create()
 	{
 		Paths.clearStoredMemory();
