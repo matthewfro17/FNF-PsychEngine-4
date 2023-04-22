@@ -212,11 +212,11 @@ class DaveAndBambiMenuState extends MusicBeatState
 		{
 			switch (AllPossibleSongs[].toLowerCase())
 			{
-					addWeek(['corned'], 3, ['bambi']);					
-                    addWeek(['whoopsie'], 3, ['expunged']);
-                    addWeek(['binomial'], 1, ['dave']);
-                    addWeek(['get-ready'], 1, ['dave-annoyed']
-					addWeek(['polynomial'], 2,['dave-angey']);
+				addWeek(['corned'], 3, ['bambi']);					
+                                addWeek(['whoopsie'], 3, ['expunged']);
+				addWeek(['binomial'], 1, ['dave']);
+				addWeek(['get-ready'], 1, ['dave-annoyed']
+				addWeek(['polynomial'], 2,['dave-angey']);
 			}
 		}
 
