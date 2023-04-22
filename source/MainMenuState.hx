@@ -155,9 +155,9 @@ class MainMenuState extends MusicBeatState
 				char.antialiasing = ClientPrefs.globalAntialiasing;
 				add(char);
 
-			// Credits
+			// Options
 			var offset:Float = 108 - (Math.max(optionShit.length, 4) - 4) * 80;
-			var menuItem:FlxSprite = new FlxSprite(120, 400)).loadGraphic(Paths.image('mainmenu/credits'));
+			var menuItem:FlxSprite = new FlxSprite(120, 400)).loadGraphic(Paths.image('mainmenu/options'));
 			menuItem.scale.x = scale;
 			menuItem.scale.y = scale;
 			menuItem.ID = 2;
@@ -169,7 +169,7 @@ class MainMenuState extends MusicBeatState
 			menuItem.antialiasing = ClientPrefs.globalAntialiasing;
 			menuItem.updateHitbox();
 
-            	char = new FlxSprite(-100, -270).loadGraphic(Paths.image('backgrounds/credits'));//put your cords and image here
+            	char = new FlxSprite(-100, -270).loadGraphic(Paths.image('backgrounds/options'));//put your cords and image here
 				char.frames = Paths.getSparrowAtlas('mainmenu/bambiRemake');//here put the name of the xml
 				char.animation.addByPrefix('idleR', 'bambi idle', 24, true);//on 'idle normal' change it to your xml one
 				char.animation.play('idleR');//you can rename the anim however you want to
@@ -285,8 +285,9 @@ class MainMenuState extends MusicBeatState
 										MusicBeatState.switchState(new PlayMenuState());
 									case 'extras':
 										MusicBeatState.switchState(new ExtrasMenuState());
-									case 'credits':
-										MusicBeatState.switchState(new CreditsState());
+									case '									case 'options':
+										MusicBeatState.switchState(new options.OptionsState());':
+										MusicBeatState.switchState(new options.OptionsState());
 								}
 							});
 						}
